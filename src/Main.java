@@ -4,31 +4,27 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Basic Calculator
-        System.out.println("Enter two numbers for Basic Calculator:");
+        // Prompt for numbers
+        System.out.print("Enter two numbers for Basic Calculator: ");
         double num1 = scanner.nextDouble();
         double num2 = scanner.nextDouble();
 
-        // Prompt for operation choice
-        System.out.println("Choose an operation (+ or -):");
-        char operation = scanner.next().charAt(0);
+        // Clear the input buffer
+        scanner.nextLine();
 
-        BasicCalculator basicCalculator = new BasicCalculator();
-        double result;
-        switch (operation) {
-            case '+':
-                basicCalculator.add(num1);
-                basicCalculator.add(num2);
-                break;
-            case '-':
-                basicCalculator.add(num1);
-                basicCalculator.subtract(num2);
-                break;
-            default:
-                System.out.println("Invalid operation!");
-                return; // Exit if invalid operation
+        // Prompt for operation
+        System.out.print("Choose an operation (+ or -): ");
+        String operation = scanner.nextLine();
+
+        // Validate and perform the operation
+        if (operation.equals("+")) {
+            System.out.println("Result: " + (num1 + num2));
+        } else if (operation.equals("-")) {
+            System.out.println("Result: " + (num1 - num2));
+        } else {
+            System.out.println("Invalid operation!");
         }
-        System.out.println("Basic Calculator Result: " + basicCalculator.getResult());
+
         // Singleton Calculator
         System.out.println("Enter a number to add to Singleton Calculator:");
         double singletonNum = scanner.nextDouble();
