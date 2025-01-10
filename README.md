@@ -1,5 +1,6 @@
-Wij hebben alles gepair programmed samen met elkaar op 1 computer dus we hebben samen alles op 1 laptop gedaan.
-Repository: https://github.com/ArminIR/SDE_Calculator
+Dit is mijn software design program, ik heb deze alleen gemaakt omdat ik dit nog moet herkansen van vorig jaar.
+
+Repository:https://github.com/AVoorhoeve514/SDEProgram
 
 
 Singleton Patroon:
