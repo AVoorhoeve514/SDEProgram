@@ -1,36 +1,13 @@
-Wij hebben alles gepair programmed samen met elkaar op 1 computer dus we hebben samen alles op 1 laptop gedaan.
-Repository: https://github.com/ArminIR/SDE_Calculator
+Dit is mijn calculator die ik alleen gemaakt heb want ik had geen groepsgenoot (is herkansing). Repository: https://github.com/AVoorhoeve514/SDEProgram
 
+Singleton Patroon: Het Singleton-patroon zorgt ervoor dat er maar één instantie van een klasse is en dat je er overal makkelijk bij kunt. Bij mijn calculator-app betekent dit dat er maar één rekenmachine tegelijk bestaat. Dit voorkomt dat er onnodig meerdere exemplaren worden aangemaakt, wat super efficiënt is.
 
-Singleton Patroon:
-Garandeert dat een klasse slechts één instantie heeft en biedt een wereldwijde toegangspunt ernaar. 
-Toegepast op de Calculator-klasse, zorgt het ervoor dat er slechts één instantie van de rekenmachine 
-is in de applicatie, waardoor het efficiënt is en het onnodig maken van redundante instanties wordt vermeden.
+Decorator Patroon: Dit patroon voegt extra functies toe aan de BasicCalculator zonder de originele code te veranderen. Bijvoorbeeld, de ScientificCalculatorDecorator bouwt voort op de basisrekenmachine door functies zoals machtsverheffen en wortels toe te voegen. Zo kan ik de calculator uitbreiden zonder alles om te gooien.
 
-Factory Method Patroon: 
-Definieert een interface voor het maken van objecten, maar laat subklassen beslissen welke klasse 
-geïnstantieerd moet worden. Geïmplementeerd in CalculatorFactory, maakt het de creatie van verschillende 
-soorten rekenmachines mogelijk (bijv. basis, wetenschappelijk) en houdt het de instantiatie-logica ingekapseld.
+Observer Patroon: Het Observer-patroon zorgt ervoor dat onderdelen van de app automatisch op de hoogte worden gebracht als er iets verandert in de rekenmachine, zoals na een nieuwe berekening. Hierdoor blijft alles in de app altijd up-to-date, zonder dat ik overal handmatig dingen moet aanpassen.
 
-Decorator Patroon: 
-Verbetert het gedrag van de BasicCalculator door dynamisch toevoegen van functies. 
-De ScientificCalculatorDecorator versiert een basisrekenmachine door wetenschappelijke 
-rekenfunctionaliteit toe te voegen zonder de bestaande code te wijzigen.
+Command Patroon: Met het Command-patroon worden berekeningen zoals optellen en aftrekken verpakt in aparte objecten. Dit maakt het super makkelijk om nieuwe functies toe te voegen, acties te loggen, of zelfs een undo/redo-systeem te maken. Alles is netjes georganiseerd.
 
-Composite Patroon: 
-Representeert wiskundige expressies als een combinatie van basisberekeningen. 
-De CompositeExpression maakt het mogelijk om complexe expressies te creëren door bladknopen 
-(BasicCalculation) te combineren. Dit patroon vereenvoudigt de clientcode door individuele berekeningen 
-en samengestelde expressies uniform te behandelen.
+Composite Patroon: Het Composite-patroon wordt gebruikt om ingewikkelde wiskundige berekeningen te maken. Denk aan een expressie zoals (2 + 3) * 4, waarbij kleinere berekeningen worden gecombineerd tot iets groters. Mijn CompositeExpression regelt dit door individuele berekeningen (zoals optellen) samen te voegen. Hierdoor is het voor mij makkelijker en overzichtelijker.
 
-Command Patroon: 
-Het Command-patroon in de rekenmachine-applicatie maakt het mogelijk om berekeningsoperaties 
-(zoals optellen, aftrekken) in commando-objecten te encapsuleren. 
-Dit maakt het gemakkelijk om nieuwe operaties toe te voegen, acties te loggen of functionaliteit voor ongedaan 
-maken/herstellen te implementeren.
-
-Observer Patroon: 
-Het Observer-patroon wordt gebruikt om verschillende componenten van de applicatie bij te werken wanneer
-de staat van de rekenmachine verandert (bijv. bij het uitvoeren van een nieuwe berekening). 
-Het zorgt ervoor dat alle geïnteresseerde componenten (waarnemers) in sync worden 
-gehouden met de staat van de rekenmachine.
+Factory Method Patroon: Met het Factory Method-patroon kun je objecten maken via een interface, terwijl een subklasse bepaalt welk type object precies gemaakt wordt. In mijn app doet de CalculatorFactory dit door verschillende soorten rekenmachines (zoals basic of wetenschappelijk) te maken. Hierdoor blijft de logica om ze te maken netjes op één plek.
